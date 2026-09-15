@@ -237,7 +237,7 @@ jobs:
           if [ "$already" = "$VERSION" ]; then
             echo "Skip: ${pkg_name}@${VERSION} already published"
           else
-            npm publish --access public
+            npm publish --provenance --access public
             echo "Published: ${pkg_name}@${VERSION}"
           fi
         env:
